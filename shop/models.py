@@ -16,4 +16,4 @@ class Purchase(models.Model):
     date_purchase = models.DateField(auto_now_add=True, verbose_name='Дата покупки')
 
     def __str__(self):
-        return self.name
+        return f'{self.item.name}-{self.name}'
